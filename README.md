@@ -23,6 +23,10 @@ $ npm run start:prod
 
 ## Usage Instructions
 
+To set the credentials that are used in the search, the `TU_USERNAME` and `TU_PASSWORD` variables should be set.
+
+In the case of the `TU_USERNAME`, if both a `company` and a `username` was supplied with the account, the variable should be set to `<company>\<username>`.
+
 To use the service, a `POST` request should be made to the `/search` route.
 
 Authentication is through the `x-api-key` header, which must be the same value as the `API_AUTH_KEY` environment variable.
