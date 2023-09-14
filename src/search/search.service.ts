@@ -47,6 +47,6 @@ export class SearchService {
       throw CustomDelegateError.throw('search.parse.failed');
     }
 
-    return parsedSearch;
+    return parsedSearch.data;
   }
 }
