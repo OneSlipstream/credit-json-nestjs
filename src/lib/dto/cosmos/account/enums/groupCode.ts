@@ -1,0 +1,14 @@
+enum AccountGroupCode {
+  LOAN_AND_INSTALLMENT_CREDIT = 1,
+  MORTGAGE = 2,
+  REVOLVING_CREDIT_AND_BUDGET = 3,
+  TELECOMMUNICATIONS = 4,
+  UTILITIES = 5,
+  HOME_SHOPPING = 6,
+  BANK = 7,
+  MISCELLANEOUS = 8,
+  INSURANCE = 9,
+  HOME_CREDIT = 10,
+}
+
+export default AccountGroupCode;
