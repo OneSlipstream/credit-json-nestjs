@@ -48,3 +48,9 @@ The route accepts a JSON body in the following format:
 	}
 }
 ```
+
+## Change password on CallReport
+
+To change the password on a CallReport account, the script at `scripts/change_password.ts` can be run with the args as follows:
+
+`npx ts-node ./scripts/change_password.ts 'Company\User' oldpass newpass`
