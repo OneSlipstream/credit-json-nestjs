@@ -49,8 +49,8 @@ export const buildCallReportQuery = (dto: CosmosSearchParameters): object => ({
                                     {
                                       type: 'text',
                                       text:
-                                        dto.query.address.abodenumber ||
-                                        dto?.query?.address?.abodename?.substring(
+                                        dto.query.address.subBuildingNumber ||
+                                        dto?.query?.address?.subBuildingName?.substring(
                                           0,
                                           30
                                         ),
@@ -63,7 +63,7 @@ export const buildCallReportQuery = (dto: CosmosSearchParameters): object => ({
                                   elements: [
                                     {
                                       type: 'text',
-                                      text: dto.query.address.buildingnumber,
+                                      text: dto.query.address.buildingNumber,
                                     },
                                   ],
                                 },
@@ -73,7 +73,7 @@ export const buildCallReportQuery = (dto: CosmosSearchParameters): object => ({
                                   elements: [
                                     {
                                       type: 'text',
-                                      text: dto.query.address.buildingname,
+                                      text: dto.query.address.buildingName,
                                     },
                                   ],
                                 },
@@ -83,14 +83,19 @@ export const buildCallReportQuery = (dto: CosmosSearchParameters): object => ({
                                   elements: [
                                     {
                                       type: 'text',
-                                      text: dto.query.address.street1,
+                                      text: dto.query.address.line1,
                                     },
                                   ],
                                 },
                                 {
                                   type: 'element',
                                   name: 'street2',
-                                  elements: [],
+                                  elements: [
+                                    {
+                                      type: 'text',
+                                      text: dto.query.address.line2,
+                                    },
+                                  ],
                                 },
                                 {
                                   type: 'element',
@@ -103,7 +108,7 @@ export const buildCallReportQuery = (dto: CosmosSearchParameters): object => ({
                                   elements: [
                                     {
                                       type: 'text',
-                                      text: dto.query.address.town,
+                                      text: dto.query.address.city,
                                     },
                                   ],
                                 },

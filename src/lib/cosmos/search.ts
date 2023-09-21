@@ -15,15 +15,15 @@ export interface CosmosSearchQuery {
   lastname: string;
   dob: string;
   address: {
-    abodenumber?: string;
-    abodename?: string;
-    buildingnumber?: string;
-    buildingname?: string;
-    street1: string;
-    street2?: string;
+    subBuildingNumber?: string;
+    subBuildingName?: string;
+    buildingNumber?: string;
+    buildingName?: string;
+    line1: string;
+    line2?: string;
     sublocality?: string;
     locality: string;
-    town: string;
+    city: string;
     postcode: string;
   };
 }

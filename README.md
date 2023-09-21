@@ -42,7 +42,7 @@ The route accepts a JSON body in the following format:
 	"dob": "1970-01-01T00:00:00.000Z",
 	"address": {
 		"buildingNumber": 1,
-		"street1": "Currency Street",
+		"line1": "Currency Street",
 		"town": "London",
 		"postcode": "X9 9WF"
 	}

@@ -120,7 +120,7 @@ export const buildCosmosXMLQuery = (dto: CosmosSearchParameters): object => ({
                                         {
                                           type: 'text',
                                           text: dto.query.address
-                                            .buildingnumber,
+                                            .buildingNumber,
                                         },
                                       ],
                                     },
@@ -130,7 +130,7 @@ export const buildCosmosXMLQuery = (dto: CosmosSearchParameters): object => ({
                                       elements: [
                                         {
                                           type: 'text',
-                                          text: dto.query.address.street1,
+                                          text: dto.query.address.line1,
                                         },
                                       ],
                                     },
@@ -140,7 +140,7 @@ export const buildCosmosXMLQuery = (dto: CosmosSearchParameters): object => ({
                                       elements: [
                                         {
                                           type: 'text',
-                                          text: dto.query.address.town,
+                                          text: dto.query.address.city,
                                         },
                                       ],
                                     },

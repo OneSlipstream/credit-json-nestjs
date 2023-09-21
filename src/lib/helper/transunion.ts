@@ -42,16 +42,8 @@ class TransUnionBureauHelper implements BureauHelperProtocol {
         lastname: consumer.lastname,
         dob: consumer.dob,
         address: {
-          abodenumber: address.subBuildingNumber ?? undefined,
-          abodename: address.subBuildingName ?? undefined,
-          buildingnumber: address.buildingNumber ?? undefined,
-          buildingname: address.buildingName ?? undefined,
-          street1: address.line1,
-          street2: address.line2 ?? undefined,
-          sublocality: undefined,
+          ...address,
           locality: address.city,
-          town: address.city,
-          postcode: address.postcode,
         },
       },
       credentials: {
