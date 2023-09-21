@@ -8,6 +8,7 @@ export interface TUChangePasswordParameters {
 }
 
 const CALLREPORT_URL = 'https://www.callcreditsecure.co.uk/Services/BSB/CRBSB7.asmx'
+const CALLREPORT_TEST_URL = 'https://ct.callcreditsecure.co.uk/Services/BSB/CRBSB7.asmx'
 
 export const buildCallReportChangePasswordQuery = (dto: TUChangePasswordParameters): object => ({
   elements: [
@@ -125,10 +126,14 @@ const buildCallReportXMLSecurity = (credentials: TUChangePasswordParameters) => 
 
     const xmlPayload = convert.js2xml(changePasswordPayload);
 
-    const response = await axios.post<string>(CALLREPORT_URL, xmlPayload, {
+    const isCTest = /CTest/.test(dto.username);
+
+    const url = isCTest ? CALLREPORT_TEST_URL : CALLREPORT_URL;
+
+    const response = await axios.post<string>(url, xmlPayload, {
         headers: {
             'Content-Type': 'text/xml',
-            Host: new URL(CALLREPORT_URL).host,
+            Host: new URL(url).host,
         },
         timeout: 15000,
     });
